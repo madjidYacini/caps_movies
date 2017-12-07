@@ -1,0 +1,12 @@
+body{
+    background-image: url('./home-bg.jpg');
+    background-size: cover;
+    font-family: 'Roboto';
+}
+
+#footer{
+    background-color: white;
+    text-align: center;
+    height: 70px;
+    padding-top: 30px;
+  }

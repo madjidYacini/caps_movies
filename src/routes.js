@@ -4,20 +4,29 @@ import {
     Route, 
     Switch
 } from 'react-router-dom';
-import App from './components/App';
+
 import Home from './components/Home';
 import Nav  from './components/Nav';
-import Gallery from './components/Gallery'
+import Gallery from './components/Gallery';
+import Profile from './components/Profile';
+import Sign from './components/Sign';
+
 
 const MyRoute = () => (
+    
     <Router>
-        <App>
+       
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route  path="/gallery" component={Gallery} />
+                <Route  path="/gallery" component={Gallery} />   
+                <Route  path="/profile" component={Profile} /> 
+                <Route  path="/sign" component={Sign} /> 
             </Switch>
-        </App>
+   
     </Router>
+    
+    
+   
 );
 
 

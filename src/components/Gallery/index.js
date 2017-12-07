@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Caps from '../Caps';
+import Nav  from '../Nav';
 
 
 export default class Gallery extends Component {
@@ -26,7 +27,10 @@ export default class Gallery extends Component {
         })
 
         return (
-            <div>{arrCaps}</div>
+            <div>
+                <Nav />
+                <div>{arrCaps}</div>
+            </div>
         );
     }
 

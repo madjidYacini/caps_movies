@@ -8,9 +8,14 @@ import Home from '../Home'
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Nav />
-        {this.props.children}
+      <div>
+        <div className="App">
+          <Nav />
+          {this.props.children} 
+        </div>
+        <div id="foot">
+          <h3> movie finder &copy;2017</h3>
+        </div>
       </div>
     );
   }
