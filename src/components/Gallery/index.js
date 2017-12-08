@@ -25,7 +25,7 @@ export default class Gallery extends Component {
     render(){
        
         const arrCaps = this.state.caps.map((c, idx) => {
-            return <Caps name={c.movie} img={c.path} key={idx}/> ;
+            return <Caps name={c.movie.title} img={c.path} key={idx}/> ;
         })
 
         return (
