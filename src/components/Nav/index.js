@@ -27,7 +27,7 @@ const Nav = () => (
                 <li><a href="/profile">Profile</a></li>
             </ul>
             
-        </nav>
+        </nav>  
         <div className="grid">
             <form action="" method="get" className="search">
         

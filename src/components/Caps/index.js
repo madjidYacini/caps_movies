@@ -4,7 +4,7 @@ import './caps.css'
 export default class Caps extends Component{
     render() {
         var divStyle = {
-            backgroundImage: 'url(images/' + this.props.img + ')'
+            backgroundImage: 'url(' + this.props.img + ')'
         };
         return(
             <div id="caps">

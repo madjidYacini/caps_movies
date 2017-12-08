@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Caps from '../Caps';
 import Nav  from '../Nav';
+import _ from "lodash";
+import axios from "axios";
 
 
 export default class Gallery extends Component {
@@ -21,9 +23,9 @@ export default class Gallery extends Component {
 
 
     render(){
-        console.log('render');
+       
         const arrCaps = this.state.caps.map((c, idx) => {
-            return <Caps name={c.movie} img={c.pathcaps} key={idx}/> ;
+            return <Caps name={c.movie} img={c.path} key={idx}/> ;
         })
 
         return (
@@ -36,7 +38,15 @@ export default class Gallery extends Component {
 
     _fetchCaps() {
 
-        let arrayInfo = require('../data/caps.json');
-        this.setState({ caps: arrayInfo});
+        axios.get('/caps')
+        .then((response) => {
+          console.log(response.data.caps);
+          this.setState({ caps: response.data.caps});
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+
+
     }
 }
